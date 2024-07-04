@@ -1,10 +1,3 @@
-//
-//  RecipesTests.swift
-//  RecipesTests
-//
-//  Created by Bidisha Biswas on 7/4/24.
-//
-
 import XCTest
 @testable import Recipes
 
