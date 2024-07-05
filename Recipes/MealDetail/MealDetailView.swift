@@ -16,27 +16,10 @@ struct MealDetailView: View {
 						.cornerRadius(8)
 
 					// Ingredients and Measurements
-					VStack(alignment: .leading) {
-						Text("Ingredients")
-							.font(.headline)
-
-						ForEach(Array(zip(mealDetail.ingredients, mealDetail.measures)), id: \.0) { ingredient, measure in
-							HStack {
-								Text(ingredient)
-									.font(.body)
-								Spacer()
-								Text(measure)
-									.font(.body)
-									.foregroundColor(.secondary)
-							}
-							.padding(.vertical, 2)
-						}
-					}
+					IngredientsCell(ingredients: mealDetail.ingredients,
+									measurements: mealDetail.measures)
 					// Instructions
-					Text("Instructions")
-						.font(.headline)
-					Text(mealDetail.strInstructions)
-						.padding(.top, 4)
+					InstructionsCell(instructions: mealDetail.strInstructions)
 				}
 			}
 			.onAppear {
