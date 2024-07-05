@@ -1,28 +1,19 @@
 import SwiftUI
 
 struct MealsListView: View {
-	@State private var meals: [Meal] = []
+	@StateObject var viewModel = MealListViewModel()
 
 	var body: some View {
-		NavigationView {
-			List(meals) { meal in
-				MealListCell(meal: meal)
+		ZStack {
+			NavigationView {
+				List(viewModel.meals) { meal in
+					MealListCell(meal: meal)
+				}
+				.navigationTitle("🍨 Meals")
 			}
-			.navigationTitle("🍨 Meals")
-		}
-		.onAppear {
-			getMeals()
-		}
-	}
-
-	func getMeals() {
-		Task {
-			do {
-				let meals = try await NetworkManager.shared.fetchAllMeals()
-				self.meals = meals
+			.onAppear {
+				viewModel.getMeals()
 			}
-			catch {
-				print(error)
 			}
 		}
 	}

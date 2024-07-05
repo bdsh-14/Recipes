@@ -17,6 +17,7 @@
 		270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4BC2C37323B00EE3A57 /* MealDetails.swift */; };
 		270CF4BF2C3732A400EE3A57 /* RecipesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4BE2C3732A400EE3A57 /* RecipesError.swift */; };
 		270CF4C12C3733D200EE3A57 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C02C3733D200EE3A57 /* MealListCell.swift */; };
+		270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		270CF4BC2C37323B00EE3A57 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		270CF4BE2C3732A400EE3A57 /* RecipesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesError.swift; sourceTree = "<group>"; };
 		270CF4C02C3733D200EE3A57 /* MealListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
+		270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				270CF4B72C3731C200EE3A57 /* NetworkManager.swift */,
 				270CF4BE2C3732A400EE3A57 /* RecipesError.swift */,
 				270CF4C02C3733D200EE3A57 /* MealListCell.swift */,
+				270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */,
+				270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */,
 				270CF4BB2C37321100EE3A57 /* Meal.swift in Sources */,
 				270CF4B82C3731C200EE3A57 /* NetworkManager.swift in Sources */,
 				270CF4902C372FF900EE3A57 /* MealsListView.swift in Sources */,
