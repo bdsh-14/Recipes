@@ -18,6 +18,7 @@
 		270CF4BF2C3732A400EE3A57 /* RecipesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4BE2C3732A400EE3A57 /* RecipesError.swift */; };
 		270CF4C12C3733D200EE3A57 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C02C3733D200EE3A57 /* MealListCell.swift */; };
 		270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */; };
+		270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		270CF4BE2C3732A400EE3A57 /* RecipesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesError.swift; sourceTree = "<group>"; };
 		270CF4C02C3733D200EE3A57 /* MealListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
 		270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				270CF4BE2C3732A400EE3A57 /* RecipesError.swift */,
 				270CF4C02C3733D200EE3A57 /* MealListCell.swift */,
 				270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */,
+				270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				270CF4902C372FF900EE3A57 /* MealsListView.swift in Sources */,
 				270CF4BF2C3732A400EE3A57 /* RecipesError.swift in Sources */,
 				270CF4C12C3733D200EE3A57 /* MealListCell.swift in Sources */,
+				270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */,
 				270CF48E2C372FF900EE3A57 /* RecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

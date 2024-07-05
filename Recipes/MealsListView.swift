@@ -14,6 +14,8 @@ struct MealsListView: View {
 			.onAppear {
 				viewModel.getMeals()
 			}
+			if viewModel.isLoading {
+				LoadingView()
 			}
 		}
 	}
