@@ -20,6 +20,8 @@
 		270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */; };
 		270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */; };
 		270CF4CB2C3778E000EE3A57 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */; };
+		27C769572C3781220086BA6D /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769562C3781220086BA6D /* MealDetailView.swift */; };
+		27C769592C3785330086BA6D /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769582C3785330086BA6D /* MealDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
 		270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		27C769562C3781220086BA6D /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		27C769582C3785330086BA6D /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				270CF4BE2C3732A400EE3A57 /* RecipesError.swift */,
 				270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */,
 				270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */,
+				27C769562C3781220086BA6D /* MealDetailView.swift */,
+				27C769582C3785330086BA6D /* MealDetailViewModel.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -306,8 +312,10 @@
 				270CF4B82C3731C200EE3A57 /* NetworkManager.swift in Sources */,
 				270CF4902C372FF900EE3A57 /* MealsListView.swift in Sources */,
 				270CF4BF2C3732A400EE3A57 /* RecipesError.swift in Sources */,
+				27C769572C3781220086BA6D /* MealDetailView.swift in Sources */,
 				270CF4C12C3733D200EE3A57 /* MealListCell.swift in Sources */,
 				270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */,
+				27C769592C3785330086BA6D /* MealDetailViewModel.swift in Sources */,
 				270CF48E2C372FF900EE3A57 /* RecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
