@@ -7,18 +7,18 @@ struct MealDetailView: View {
 		ScrollView {
 			VStack(alignment: .leading, spacing: 10) {
 				if let mealDetail = viewModel.mealDetail {
-					
+
 					// Meal Image
 					MealRemoteImage(urlString: mealDetail.strMealThumb)
 						.aspectRatio(contentMode: .fill)
 						.frame(width: 120, height: 120)
 						.cornerRadius(8)
-					
+
 					// Ingredients and Measurements
 					VStack(alignment: .leading) {
 						Text("Ingredients")
 							.font(.headline)
-						
+
 						ForEach(Array(zip(mealDetail.ingredients, mealDetail.measures)), id: \.0) { ingredient, measure in
 							HStack {
 								Text(ingredient)
@@ -31,7 +31,6 @@ struct MealDetailView: View {
 							.padding(.vertical, 2)
 						}
 					}
-					
 					// Instructions
 					Text("Instructions")
 						.font(.headline)
@@ -46,7 +45,6 @@ struct MealDetailView: View {
 		}
 	}
 }
-
 
 #Preview {
 	MealDetailView()
