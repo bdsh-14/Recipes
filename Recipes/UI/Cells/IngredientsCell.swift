@@ -6,9 +6,6 @@ struct IngredientsCell: View {
 
     var body: some View {
 		VStack(alignment: .leading, spacing: 12) {
-			Text("Ingredients")
-				.font(.headline)
-
 			ForEach(Array(zip(ingredients, measurements)), id: \.0) { ingredient, measure in
 				HStack {
 					Text(ingredient)

@@ -4,8 +4,8 @@ struct InstructionsCell: View {
 	let instructions: String
 
     var body: some View {
-		Text("Instructions")
-			.font(.headline)
+//		Text("Instructions")
+//			.font(.headline)
 		Text(instructions)
 			.padding()
     }
