@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MealDetailView: View {
 	@StateObject var viewModel = MealDetailViewModel()
+	let mealId: String
 
 	var body: some View {
 		ScrollView {
@@ -39,7 +40,7 @@ struct MealDetailView: View {
 				}
 			}
 			.onAppear {
-				viewModel.fetchMealDetails()
+				viewModel.fetchMealDetails(for: mealId)
 			}
 			.padding()
 		}
@@ -47,5 +48,5 @@ struct MealDetailView: View {
 }
 
 #Preview {
-	MealDetailView()
+	MealDetailView(mealId: "52856")
 }

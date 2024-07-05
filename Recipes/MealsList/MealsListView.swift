@@ -2,13 +2,12 @@ import SwiftUI
 
 struct MealsListView: View {
 	@StateObject var viewModel = MealListViewModel()
-	@State var isShowingDetail: Bool = false
 
 	var body: some View {
 		ZStack {
 			NavigationView {
 				List(viewModel.meals) { meal in
-					NavigationLink(destination: MealDetailView()) {
+					NavigationLink(destination: MealDetailView(mealId: meal.idMeal)) {
 						Text("Go to detail view")
 					}
 					MealListCell(meal: meal)
@@ -17,10 +16,6 @@ struct MealsListView: View {
 			}
 			.onAppear {
 				viewModel.getMeals()
-			}
-
-			if isShowingDetail {
-				MealDetailView()
 			}
 		}
 	}
