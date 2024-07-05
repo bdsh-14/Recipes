@@ -106,14 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				270CF4B92C37320700EE3A57 /* Models */,
+				270CF4CD2C377DC600EE3A57 /* UI */,
 				270CF48D2C372FF900EE3A57 /* RecipesApp.swift */,
-				270CF48F2C372FF900EE3A57 /* MealsListView.swift */,
 				270CF4912C372FFA00EE3A57 /* Assets.xcassets */,
 				270CF4932C372FFA00EE3A57 /* Preview Content */,
-				270CF4B72C3731C200EE3A57 /* NetworkManager.swift */,
 				270CF4BE2C3732A400EE3A57 /* RecipesError.swift */,
-				270CF4C02C3733D200EE3A57 /* MealListCell.swift */,
-				270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */,
 				270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */,
 				270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */,
 			);
@@ -139,10 +136,37 @@
 		270CF4B92C37320700EE3A57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				270CF4CC2C377D9400EE3A57 /* Managers */,
 				270CF4BA2C37321100EE3A57 /* Meal.swift */,
 				270CF4BC2C37323B00EE3A57 /* MealDetails.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		270CF4CC2C377D9400EE3A57 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				270CF4B72C3731C200EE3A57 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		270CF4CD2C377DC600EE3A57 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				270CF4CE2C377E4F00EE3A57 /* Cells */,
+				270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */,
+				270CF48F2C372FF900EE3A57 /* MealsListView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		270CF4CE2C377E4F00EE3A57 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				270CF4C02C3733D200EE3A57 /* MealListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

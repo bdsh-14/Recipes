@@ -4,9 +4,8 @@ struct MealListCell: View {
 	let meal: Meal
 
     var body: some View {
-		VStack(alignment: .center, spacing: 8) {
-			Image(systemName: "teddybear.fill")
-				.resizable()
+		VStack(alignment: .leading, spacing: 8) {
+			MealRemoteImage(urlString: meal.strMealThumb)
 				.aspectRatio(contentMode: .fill)
 				.frame(width: 120, height: 120)
 				.cornerRadius(8)
