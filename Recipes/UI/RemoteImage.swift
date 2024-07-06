@@ -1,11 +1,17 @@
 import SwiftUI
 
+@MainActor
 final class ImageLoader: ObservableObject {
 	@Published var image: Image? = nil
+	private var networkManager: NetworkManagerInterface
+
+	init(networkManager: NetworkManagerInterface = NetworkManager.shared) {
+		self.networkManager = networkManager
+	}
 
 	func load(from urlString: String) {
 		Task {
-			let uiImage = try await NetworkManager.shared.downloadImage(from: urlString)
+			let uiImage = try await networkManager.downloadImage(from: urlString)
 			guard let uiImage else { return }
 			self.image = Image(uiImage: uiImage)
 		}

@@ -1,12 +1,12 @@
-import Foundation
+import UIKit
 @testable import Recipes
 
-class MockNetworkManager: NetworkManagerInterface {
+final class MockNetworkManager: NetworkManagerInterface {
 	var shouldReturnError = false
 	var mealDetails: [MealDetail] = []
 	var meals: [Meal] = []
 
-	func fetchAllMeals() async throws -> [Recipes.Meal] {
+	func fetchAllMeals() async throws -> [Meal] {
 		if shouldReturnError {
 			throw URLError(.badServerResponse)
 		}
@@ -18,5 +18,9 @@ class MockNetworkManager: NetworkManagerInterface {
 			throw URLError(.badServerResponse)
 		}
 		return mealDetails
+	}
+
+	func downloadImage(from urlString: String) async throws -> UIImage? {
+		return UIImage()
 	}
 }

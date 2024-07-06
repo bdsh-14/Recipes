@@ -2,22 +2,28 @@ import XCTest
 @testable import Recipes
 
 class MealDetailViewModelTests: XCTestCase {
-	var viewModel: MealDetailViewModel!
+	var mockViewModel: MealDetailViewModel!
 	var mockNetworkManager: MockNetworkManager!
 
 	override func setUp() {
 		super.setUp()
 		mockNetworkManager = MockNetworkManager()
-		viewModel = MealDetailViewModel(networkManager: mockNetworkManager)
 	}
 
 	override func tearDown() {
-		viewModel = nil
+		mockViewModel = nil
 		mockNetworkManager = nil
 		super.tearDown()
 	}
 
+	@MainActor
+	func setupViewModel() {
+		mockViewModel = MealDetailViewModel(networkManager: mockNetworkManager)
+	}
+
+	@MainActor
 	func testFetchMealDetailsSuccess() async {
+		setupViewModel()
 		// Given
 		let mealDetail = MealDetail(
 			idMeal: "123",
@@ -32,21 +38,24 @@ class MealDetailViewModelTests: XCTestCase {
 		mockNetworkManager.mealDetails = [mealDetail]
 
 		// When
-		await viewModel.fetchMealDetails(for: "123")
+		await mockViewModel.fetchMealDetails(for: "123")
 
 		// Then
-		XCTAssertEqual(viewModel.mealDetail?.idMeal, "123")
-		XCTAssertEqual(viewModel.mealDetail?.strMeal, "Test Meal")
-		//XCTAssertFalse(viewModel.isLoading)
+		XCTAssertEqual(mockViewModel.mealDetail?.idMeal, "123")
+		XCTAssertEqual(mockViewModel.mealDetail?.strMeal, "Test Meal")
+		XCTAssertFalse(mockViewModel.isLoading)
 	}
+
+	@MainActor
 	func testFetchMealDetailsFailure() async {
+		setupViewModel()
 		// Given
 		mockNetworkManager.shouldReturnError = true
 		// When
-		await viewModel.fetchMealDetails(for: "123")
+		await mockViewModel.fetchMealDetails(for: "123")
 
 		// Then
-		XCTAssertNil(viewModel.mealDetail)
-		//XCTAssertFalse(viewModel.isLoading)
+		XCTAssertNil(mockViewModel.mealDetail)
+		XCTAssertFalse(mockViewModel.isLoading)
 	}
 }

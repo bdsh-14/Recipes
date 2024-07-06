@@ -3,6 +3,7 @@ import UIKit
 protocol NetworkManagerInterface {
 	func fetchAllMeals() async throws -> [Meal]
 	func fetchMealDetails(for mealId: Int) async throws -> [MealDetail]
+	func downloadImage(from urlString: String) async throws -> UIImage?
 }
 
 final class NetworkManager: NetworkManagerInterface {
