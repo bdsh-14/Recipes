@@ -1,6 +1,11 @@
 import UIKit
 
-final class NetworkManager {
+protocol NetworkManagerInterface {
+	func fetchAllMeals() async throws -> [Meal]
+	func fetchMealDetails(for mealId: Int) async throws -> [MealDetail]
+}
+
+final class NetworkManager: NetworkManagerInterface {
 	static let shared = NetworkManager()
 	private let cache = NSCache<NSString, UIImage>()
 

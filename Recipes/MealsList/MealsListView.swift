@@ -20,7 +20,7 @@ struct MealsListView: View {
 			.navigationTitle("🥘 Meals")
 		}
 		.onAppear {
-			viewModel.getMeals()
+			viewModel.fetchAllMeals()
 		}
 	}
 }

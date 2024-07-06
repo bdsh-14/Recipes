@@ -4,7 +4,13 @@ class MealsListViewModel: ObservableObject {
 	@Published var meals: [Meal] = []
 	@Published var isLoading: Bool = false
 
-	func getMeals() {
+	private var networkManager: NetworkManagerInterface
+
+	init(networkManager: NetworkManagerInterface = NetworkManager.shared) {
+		self.networkManager = networkManager
+	}
+
+	func fetchAllMeals() {
 		isLoading = true
 		Task {
 			isLoading = false
