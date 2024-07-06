@@ -16,13 +16,14 @@
 		270CF4BB2C37321100EE3A57 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4BA2C37321100EE3A57 /* Meal.swift */; };
 		270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4BC2C37323B00EE3A57 /* MealDetails.swift */; };
 		270CF4C12C3733D200EE3A57 /* MealListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C02C3733D200EE3A57 /* MealListCell.swift */; };
-		270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */; };
+		270CF4C52C376E2A00EE3A57 /* MealsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */; };
 		270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */; };
 		270CF4CB2C3778E000EE3A57 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */; };
 		273414962C386F120034619D /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414952C386F120034619D /* IngredientsCell.swift */; };
 		273414982C3870850034619D /* InstructionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414972C3870850034619D /* InstructionsCell.swift */; };
 		273414D02C38C33F0034619D /* MealImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414CF2C38C33F0034619D /* MealImageView.swift */; };
 		273414D22C38F2520034619D /* ExpandableRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414D12C38F2520034619D /* ExpandableRowStyle.swift */; };
+		273414D42C38FB1B0034619D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273414D32C38FB1B0034619D /* LaunchScreen.storyboard */; };
 		27C769572C3781220086BA6D /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769562C3781220086BA6D /* MealDetailView.swift */; };
 		27C769592C3785330086BA6D /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769582C3785330086BA6D /* MealDetailViewModel.swift */; };
 		27EF339F2C38698600CF21D0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF339E2C38698600CF21D0 /* String+Ext.swift */; };
@@ -58,13 +59,15 @@
 		270CF4BA2C37321100EE3A57 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		270CF4BC2C37323B00EE3A57 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
 		270CF4C02C3733D200EE3A57 /* MealListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListCell.swift; sourceTree = "<group>"; };
-		270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModel.swift; sourceTree = "<group>"; };
+		270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewModel.swift; sourceTree = "<group>"; };
 		270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		273414952C386F120034619D /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		273414972C3870850034619D /* InstructionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsCell.swift; sourceTree = "<group>"; };
 		273414CF2C38C33F0034619D /* MealImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImageView.swift; sourceTree = "<group>"; };
 		273414D12C38F2520034619D /* ExpandableRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRowStyle.swift; sourceTree = "<group>"; };
+		273414D32C38FB1B0034619D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		273414D52C39018E0034619D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		27C769562C3781220086BA6D /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		27C769582C3785330086BA6D /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		27EF339E2C38698600CF21D0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		270CF48C2C372FF900EE3A57 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				273414D52C39018E0034619D /* Info.plist */,
 				270CF4B92C37320700EE3A57 /* Models */,
 				270CF4CC2C377D9400EE3A57 /* Managers */,
 				27EF33A32C386CA400CF21D0 /* MealsList */,
@@ -125,6 +129,7 @@
 				270CF4CD2C377DC600EE3A57 /* UI */,
 				270CF48D2C372FF900EE3A57 /* RecipesApp.swift */,
 				270CF4912C372FFA00EE3A57 /* Assets.xcassets */,
+				273414D32C38FB1B0034619D /* LaunchScreen.storyboard */,
 				270CF4932C372FFA00EE3A57 /* Preview Content */,
 			);
 			path = Recipes;
@@ -205,7 +210,7 @@
 		27EF33A32C386CA400CF21D0 /* MealsList */ = {
 			isa = PBXGroup;
 			children = (
-				270CF4C42C376E2A00EE3A57 /* MealListViewModel.swift */,
+				270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */,
 				270CF48F2C372FF900EE3A57 /* MealsListView.swift */,
 			);
 			path = MealsList;
@@ -315,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273414D42C38FB1B0034619D /* LaunchScreen.storyboard in Resources */,
 				270CF4952C372FFA00EE3A57 /* Preview Assets.xcassets in Resources */,
 				270CF4922C372FFA00EE3A57 /* Assets.xcassets in Resources */,
 			);
@@ -343,7 +349,7 @@
 			files = (
 				273414D22C38F2520034619D /* ExpandableRowStyle.swift in Sources */,
 				270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */,
-				270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */,
+				270CF4C52C376E2A00EE3A57 /* MealsListViewModel.swift in Sources */,
 				270CF4BB2C37321100EE3A57 /* Meal.swift in Sources */,
 				270CF4CB2C3778E000EE3A57 /* RemoteImage.swift in Sources */,
 				270CF4B82C3731C200EE3A57 /* NetworkManager.swift in Sources */,
@@ -521,9 +527,11 @@
 				DEVELOPMENT_TEAM = GVKK7BHHAM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -551,9 +559,11 @@
 				DEVELOPMENT_TEAM = GVKK7BHHAM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Recipes/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

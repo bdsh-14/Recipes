@@ -1,6 +1,6 @@
 import Foundation
 
-class MealListViewModel: ObservableObject {
+class MealsListViewModel: ObservableObject {
 	@Published var meals: [Meal] = []
 	@Published var isLoading: Bool = false
 
