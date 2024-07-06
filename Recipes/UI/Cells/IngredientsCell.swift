@@ -20,7 +20,7 @@ struct IngredientsCell: View {
 					Spacer()
 					Text(measure)
 						.font(.body)
-						.foregroundColor(.secondary)
+						.foregroundColor(.brown)
 				}
 			}
 		}

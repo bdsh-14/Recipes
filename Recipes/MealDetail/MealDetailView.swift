@@ -2,7 +2,8 @@ import SwiftUI
 
 struct MealDetailView: View {
 	@StateObject var viewModel = MealDetailViewModel()
-	let (mealId, mealName): (String, String)
+	let mealId: String
+	let mealName: String
 	@State private var ingredientsExpanded = false
 	@State private var instructionsExpanded = false
 
