@@ -59,6 +59,7 @@ struct MealDetailView: View {
 				.listStyle(.insetGrouped)
 			}
 		}
+		.navigationBarTitle(mealName)
 		.onAppear {
 			viewModel.fetchMealDetails(for: mealId)
 		}

@@ -9,6 +9,8 @@ struct MealsListView: View {
 				List(viewModel.meals) { meal in
 					NavigationLink(destination: MealDetailView(mealId: meal.idMeal)) {
 						Text("Go to detail view")
+					NavigationLink(destination: MealDetailView(mealId: meal.idMeal, mealName: meal.strMeal)) {
+						MealListCell(meal: meal)
 					}
 					MealListCell(meal: meal)
 				}
