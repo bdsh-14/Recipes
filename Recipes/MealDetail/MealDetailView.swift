@@ -14,7 +14,7 @@ private enum Section: Int {
 
 struct MealDetailView: View {
 	@StateObject var viewModel = MealDetailViewModel()
-	let mealId: String
+	let (mealId, mealName): (String, String)
 	@State private var selection: String?
 	@State private var items: [Item] = [
 		Item(title: "Ingredients", section: .ingredients),
@@ -22,7 +22,7 @@ struct MealDetailView: View {
 	]
 
 	var body: some View {
-		VStack(alignment: .leading, spacing: 10) {
+		VStack {
 			if let mealDetail = viewModel.mealDetail {
 				MealImageView(imageUrl: mealDetail.strMealThumb)
 					.padding(.bottom)
@@ -32,6 +32,8 @@ struct MealDetailView: View {
 						VStack {
 							HStack {
 								Text(item.title)
+									.font(.title3)
+									.fontWeight(.medium)
 									.padding(.bottom)
 								Spacer()
 								Image(systemName: item.isExpanded ? "chevron.down" : "chevron.right")
@@ -50,10 +52,10 @@ struct MealDetailView: View {
 								}
 							}
 						}
-						.padding()
+						.listRowBackground(Color.clear)
 					}
 				}
-				.listStyle(.insetGrouped)
+				.listStyle(.plain)
 			}
 		}
 		.navigationBarTitle(mealName)
@@ -61,9 +63,12 @@ struct MealDetailView: View {
 			viewModel.fetchMealDetails(for: mealId)
 		}
 		.padding()
+		.background {
+			Color.brown.opacity(0.4).ignoresSafeArea()
+		}
 	}
 }
 
 #Preview {
-	MealDetailView(mealId: "52856")
+	MealDetailView(mealId: "52856", mealName: "Ice-cream")
 }

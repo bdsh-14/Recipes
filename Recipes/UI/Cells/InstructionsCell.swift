@@ -4,9 +4,10 @@ struct InstructionsCell: View {
 	let instructions: String
 
     var body: some View {
-//		Text("Instructions")
-//			.font(.headline)
 		Text(instructions)
+			.font(.body)
+			.fontWeight(.regular)
+			.foregroundStyle(Color.black).opacity(0.8)
 			.padding()
     }
 }

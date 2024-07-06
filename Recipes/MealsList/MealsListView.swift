@@ -4,21 +4,23 @@ struct MealsListView: View {
 	@StateObject var viewModel = MealListViewModel()
 
 	var body: some View {
-		ZStack {
-			NavigationView {
+		NavigationStack {
+			ZStack {
+				Color.brown.opacity(0.4).ignoresSafeArea()
 				List(viewModel.meals) { meal in
-					NavigationLink(destination: MealDetailView(mealId: meal.idMeal)) {
-						Text("Go to detail view")
 					NavigationLink(destination: MealDetailView(mealId: meal.idMeal, mealName: meal.strMeal)) {
 						MealListCell(meal: meal)
 					}
-					MealListCell(meal: meal)
+					.listRowBackground(Color.clear)
+					.listRowSeparator(.hidden)
 				}
-				.navigationTitle("🍨 Meals")
+				.scrollContentBackground(.hidden)
+				.listStyle(.plain)
 			}
-			.onAppear {
-				viewModel.getMeals()
-			}
+			.navigationTitle("🍨 Meals")
+		}
+		.onAppear {
+			viewModel.getMeals()
 		}
 	}
 }
