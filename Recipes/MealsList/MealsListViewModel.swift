@@ -10,17 +10,15 @@ class MealsListViewModel: ObservableObject {
 		self.networkManager = networkManager
 	}
 
-	func fetchAllMeals() {
+	func fetchAllMeals() async {
 		isLoading = true
-		Task {
-			isLoading = false
-			do {
-				let meals = try await NetworkManager.shared.fetchAllMeals()
-				self.meals = meals
-			}
-			catch {
-				print(error)
-			}
+		do {
+			let meals = try await NetworkManager.shared.fetchAllMeals()
+			self.meals = meals
 		}
+		catch {
+			print(error)
+		}
+		isLoading = false
 	}
 }

@@ -8,7 +8,8 @@ struct MealsListView: View {
 			ZStack {
 				Color.brown.opacity(0.4).ignoresSafeArea()
 				List(viewModel.meals) { meal in
-					NavigationLink(destination: MealDetailView(mealId: meal.idMeal, mealName: meal.strMeal)) {
+					NavigationLink(destination: MealDetailView(mealId: meal.idMeal, 
+															   mealName: meal.strMeal)) {
 						MealListCell(meal: meal)
 					}
 					.listRowBackground(Color.clear)
@@ -20,7 +21,9 @@ struct MealsListView: View {
 			.navigationTitle("🥘 Meals")
 		}
 		.onAppear {
-			viewModel.fetchAllMeals()
+			Task {
+				await viewModel.fetchAllMeals()
+			}
 		}
 	}
 }

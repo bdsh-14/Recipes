@@ -65,3 +65,22 @@ struct MealDetail: Decodable {
 	}
 }
 
+extension MealDetail {
+	init(idMeal: String, strMeal: String, strDrinkAlternate: String? = nil, strCategory: String, strArea: String, strInstructions: String, strMealThumb: String, strTags: String? = nil, strYoutube: String? = nil, ingredients: [String], measures: [String], strSource: String? = nil, strImageSource: String? = nil, strCreativeCommonsConfirmed: String? = nil, dateModified: String? = nil) {
+		self.idMeal = idMeal
+		self.strMeal = strMeal
+		self.strDrinkAlternate = strDrinkAlternate
+		self.strCategory = strCategory
+		self.strArea = strArea
+		self.strInstructions = strInstructions
+		self.strMealThumb = strMealThumb
+		self.strTags = strTags
+		self.strYoutube = strYoutube
+		self.ingredients = ingredients
+		self.measures = measures
+		self.strSource = strSource
+		self.strImageSource = strImageSource
+		self.strCreativeCommonsConfirmed = strCreativeCommonsConfirmed
+		self.dateModified = dateModified
+	}
+}
