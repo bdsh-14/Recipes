@@ -14,8 +14,7 @@ struct MealDetailView: View {
 					.padding(.bottom)
 				List {
 					DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
-						IngredientsCell(ingredients: mealDetail.ingredients, 
-										measurements: mealDetail.measures)
+						IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
 					}
 					.modifier(ExpandableRowStyle())
 					DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
@@ -28,14 +27,15 @@ struct MealDetailView: View {
 			}
 		}
 		.navigationBarTitle(mealName)
-		.onAppear {
-			Task {
-				await viewModel.fetchMealDetails(for: mealId)
-			}
-		}
 		.padding()
 		.background {
 			Color.brown.opacity(0.4).ignoresSafeArea()
+		}
+		.task {
+			await viewModel.fetchMealDetails(for: mealId)
+		}
+		if viewModel.isLoading {
+			LoadingView()
 		}
 	}
 }

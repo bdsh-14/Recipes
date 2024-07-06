@@ -20,10 +20,11 @@ struct MealsListView: View {
 			}
 			.navigationTitle("🥘 Meals")
 		}
-		.onAppear {
-			Task {
-				await viewModel.fetchAllMeals()
-			}
+		.task {
+			await viewModel.fetchAllMeals()
+		}
+		if viewModel.isLoading {
+			LoadingView()
 		}
 	}
 }

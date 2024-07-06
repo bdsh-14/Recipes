@@ -14,8 +14,8 @@ class MealsListViewModel: ObservableObject {
 	func fetchAllMeals() async {
 		isLoading = true
 		do {
-			let meals = try await NetworkManager.shared.fetchAllMeals()
-			self.meals = meals
+			let meals = try await networkManager.fetchAllMeals()
+			self.meals = meals.sorted(by: { $0.strMeal < $1.strMeal })
 		}
 		catch {
 			print(error)

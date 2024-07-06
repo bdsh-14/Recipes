@@ -1,24 +1,23 @@
 import SwiftUI
 
 struct IngredientsCell: View {
-	let ingredients: [String]
-	let measurements: [String]
+	let ingredientsMeasurements: [IngredientMeasurement]
 
     var body: some View {
 		VStack(alignment: .leading, spacing: 12) {
-			ForEach(Array(zip(ingredients, measurements)), id: \.0) { ingredient, measure in
+			ForEach(ingredientsMeasurements) { item in
 				HStack {
-					Text(ingredient)
+					Text(item.ingredient)
 						.font(.body)
-							.foregroundStyle(
-								.linearGradient(
-									colors: [.brown, .black],
-									startPoint: .top,
-									endPoint: .bottom
-								)
+						.foregroundStyle(
+							.linearGradient(
+								colors: [.brown, .black],
+								startPoint: .top,
+								endPoint: .bottom
 							)
+						)
 					Spacer()
-					Text(measure)
+					Text(item.measurement)
 						.font(.body)
 						.foregroundColor(.brown)
 				}
@@ -28,6 +27,5 @@ struct IngredientsCell: View {
 }
 
 #Preview {
-	IngredientsCell(ingredients: ["Caster Sugar", "Plain Flour", "Butter"],
-					measurements: ["60g", "120g", "60g"])
+	IngredientsCell(ingredientsMeasurements: [.init(ingredient: "Butter", measurement: "60g")])
 }

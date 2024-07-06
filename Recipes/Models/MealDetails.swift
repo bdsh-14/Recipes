@@ -4,6 +4,12 @@ struct MealDetailResponse: Decodable {
 	let meals: [MealDetail]
 }
 
+struct IngredientMeasurement: Identifiable {
+	let id = UUID()
+	let ingredient: String
+	let measurement: String
+}
+
 struct MealDetail: Decodable {
 	let idMeal: String
 	let strMeal: String
@@ -14,8 +20,7 @@ struct MealDetail: Decodable {
 	let strMealThumb: String
 	let strTags: String?
 	let strYoutube: String?
-	let ingredients: [String]
-	let measures: [String]
+	let ingredientMeasurements: [IngredientMeasurement]
 	let strSource: String?
 	let strImageSource: String?
 	let strCreativeCommonsConfirmed: String?
@@ -45,7 +50,7 @@ struct MealDetail: Decodable {
 		dateModified = try container.decodeIfPresent(String.self, forKey: .dateModified)
 
 		var ingredients = [String]()
-		var measures = [String]()
+		var measurements = [String]()
 
 		for i in 1...20 {
 			if let ingredient = try container.decodeIfPresent(String.self, forKey: CodingKeys(rawValue: "strIngredient\(i)")!) {
@@ -56,12 +61,12 @@ struct MealDetail: Decodable {
 
 			if let measure = try container.decodeIfPresent(String.self, forKey: CodingKeys(rawValue: "strMeasure\(i)")!) {
 				if !measure.isEmpty {
-					measures.append(measure)
+					measurements.append(measure)
 				}
 			}
 		}
-		self.ingredients = ingredients
-		self.measures = measures
+
+		ingredientMeasurements = zip(ingredients, measurements).map { IngredientMeasurement(ingredient: $0, measurement: $1) }
 	}
 }
 
@@ -76,8 +81,7 @@ extension MealDetail {
 		self.strMealThumb = strMealThumb
 		self.strTags = strTags
 		self.strYoutube = strYoutube
-		self.ingredients = ingredients
-		self.measures = measures
+		self.ingredientMeasurements = [IngredientMeasurement(ingredient: "Butter", measurement: "60g")]
 		self.strSource = strSource
 		self.strImageSource = strImageSource
 		self.strCreativeCommonsConfirmed = strCreativeCommonsConfirmed
