@@ -17,7 +17,7 @@ struct MealsListView: View {
 				.scrollContentBackground(.hidden)
 				.listStyle(.plain)
 			}
-			.navigationTitle("🍨 Meals")
+			.navigationTitle("🥘 Meals")
 		}
 		.onAppear {
 			viewModel.getMeals()
