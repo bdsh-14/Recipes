@@ -9,8 +9,11 @@ protocol NetworkManagerInterface {
 final class NetworkManager: NetworkManagerInterface {
 	static let shared = NetworkManager()
 	private let cache = NSCache<NSString, UIImage>()
+	private let session: URLSession
 
-	private init() { }
+	init(session: URLSession = URLSession.shared) {
+		self.session = session
+	}
 
 	func fetchAllMeals() async throws -> [Meal] {
 		var components = URLComponents()
@@ -22,7 +25,7 @@ final class NetworkManager: NetworkManagerInterface {
 		]
 		guard let url = components.url else { preconditionFailure("Invalid URL string") }
 
-		let (data, response) = try await URLSession.shared.data(from: url)
+		let (data, response) = try await session.data(from: url)
 		guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
 			throw URLError(.badServerResponse)
 		}
@@ -41,7 +44,7 @@ final class NetworkManager: NetworkManagerInterface {
 		]
 		guard let url = components.url else { preconditionFailure("Invalid URL string") }
 
-		let (data, response) = try await URLSession.shared.data(from: url)
+		let (data, response) = try await session.data(from: url)
 		guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
 			throw URLError(.badServerResponse)
 		}
@@ -56,7 +59,7 @@ final class NetworkManager: NetworkManagerInterface {
 			return image
 		}
 		guard let url = URL(string: urlString) else { return nil }
-		let (data, _) = try await URLSession.shared.data(from: url)
+		let (data, _) = try await session.data(from: url)
 		guard let image = UIImage(data: data) else { return nil }
 		cache.setObject(image, forKey: key)
 		return image

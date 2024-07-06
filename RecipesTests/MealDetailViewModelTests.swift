@@ -1,7 +1,7 @@
 import XCTest
 @testable import Recipes
 
-class MealDetailViewModelTests: XCTestCase {
+final class MealDetailViewModelTests: XCTestCase {
 	var mockViewModel: MealDetailViewModel!
 	var mockNetworkManager: MockNetworkManager!
 
