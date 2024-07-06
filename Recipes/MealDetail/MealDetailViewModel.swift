@@ -1,5 +1,6 @@
 import Foundation
 
+@MainActor
 class MealDetailViewModel: ObservableObject {
 	@Published var mealDetail: MealDetail?
 	private var networkManager: NetworkManagerInterface
