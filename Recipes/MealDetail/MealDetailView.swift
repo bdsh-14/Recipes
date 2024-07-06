@@ -24,11 +24,8 @@ struct MealDetailView: View {
 	var body: some View {
 		VStack(alignment: .leading, spacing: 10) {
 			if let mealDetail = viewModel.mealDetail {
-				// Meal Image
-				MealRemoteImage(urlString: mealDetail.strMealThumb)
-					.aspectRatio(contentMode: .fill)
-					.frame(width: 120, height: 120)
-					.cornerRadius(8)
+				MealImageView(imageUrl: mealDetail.strMealThumb)
+					.padding(.bottom)
 
 				List {
 					ForEach($items) { $item in

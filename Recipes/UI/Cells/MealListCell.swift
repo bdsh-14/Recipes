@@ -4,14 +4,15 @@ struct MealListCell: View {
 	let meal: Meal
 
     var body: some View {
-		VStack(alignment: .leading, spacing: 8) {
-			MealRemoteImage(urlString: meal.strMealThumb)
-				.aspectRatio(contentMode: .fill)
-				.frame(width: 120, height: 120)
-				.cornerRadius(8)
-			Text("\(meal.strMeal)")
-				.foregroundStyle(.secondary)
-				.fontWeight(.semibold)
+		ZStack {
+			VStack {
+				MealImageView(imageUrl: meal.strMealThumb)
+
+				Text("\(meal.strMeal)")
+					.foregroundStyle(.secondary)
+					.fontWeight(.bold)
+			}
+			.padding([.bottom])
 		}
     }
 }
