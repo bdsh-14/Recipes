@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MealsListView: View {
-	@StateObject var viewModel = MealListViewModel()
+	@StateObject var viewModel = MealsListViewModel()
 
 	var body: some View {
 		NavigationStack {
