@@ -22,7 +22,6 @@ struct IngredientsCell: View {
 						.font(.body)
 						.foregroundColor(.secondary)
 				}
-				.padding([.leading, .trailing])
 			}
 		}
     }

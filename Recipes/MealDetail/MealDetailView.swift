@@ -11,22 +11,15 @@ struct MealDetailView: View {
 			if let mealDetail = viewModel.mealDetail {
 				MealImageView(imageUrl: mealDetail.strMealThumb)
 					.padding(.bottom)
-
 				List {
 					DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
 						IngredientsCell(ingredients: mealDetail.ingredients, measurements: mealDetail.measures)
 					}
-					.tint(.brown)
-					.font(.title3)
-					.fontWeight(.medium)
-					.listRowBackground(Color.clear)
+					.modifier(ExpandableRowStyle())
 					DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
 						InstructionsCell(instructions: mealDetail.strInstructions)
 					}
-					.tint(.brown)
-					.font(.title3)
-					.fontWeight(.medium)
-					.listRowBackground(Color.clear)
+					.modifier(ExpandableRowStyle())
 				}
 				.scrollContentBackground(.hidden)
 				.listStyle(.plain)

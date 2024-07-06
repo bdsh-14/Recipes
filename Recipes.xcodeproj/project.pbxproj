@@ -22,6 +22,7 @@
 		273414962C386F120034619D /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414952C386F120034619D /* IngredientsCell.swift */; };
 		273414982C3870850034619D /* InstructionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414972C3870850034619D /* InstructionsCell.swift */; };
 		273414D02C38C33F0034619D /* MealImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414CF2C38C33F0034619D /* MealImageView.swift */; };
+		273414D22C38F2520034619D /* ExpandableRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414D12C38F2520034619D /* ExpandableRowStyle.swift */; };
 		27C769572C3781220086BA6D /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769562C3781220086BA6D /* MealDetailView.swift */; };
 		27C769592C3785330086BA6D /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C769582C3785330086BA6D /* MealDetailViewModel.swift */; };
 		27EF339F2C38698600CF21D0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EF339E2C38698600CF21D0 /* String+Ext.swift */; };
@@ -63,6 +64,7 @@
 		273414952C386F120034619D /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
 		273414972C3870850034619D /* InstructionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsCell.swift; sourceTree = "<group>"; };
 		273414CF2C38C33F0034619D /* MealImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealImageView.swift; sourceTree = "<group>"; };
+		273414D12C38F2520034619D /* ExpandableRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRowStyle.swift; sourceTree = "<group>"; };
 		27C769562C3781220086BA6D /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		27C769582C3785330086BA6D /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		27EF339E2C38698600CF21D0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */,
 				270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */,
 				270CF4CE2C377E4F00EE3A57 /* Cells */,
+				273414D12C38F2520034619D /* ExpandableRowStyle.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273414D22C38F2520034619D /* ExpandableRowStyle.swift in Sources */,
 				270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */,
 				270CF4C52C376E2A00EE3A57 /* MealListViewModel.swift in Sources */,
 				270CF4BB2C37321100EE3A57 /* Meal.swift in Sources */,
