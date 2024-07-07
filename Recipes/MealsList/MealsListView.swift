@@ -7,25 +7,37 @@ struct MealsListView: View {
 		NavigationStack {
 			ZStack {
 				Color.brown.opacity(0.4).ignoresSafeArea()
-				List(viewModel.meals) { meal in
-					NavigationLink(destination: MealDetailView(mealId: meal.idMeal, 
-															   mealName: meal.strMeal)) {
-						MealListCell(meal: meal)
-					}
-					.listRowBackground(Color.clear)
-					.listRowSeparator(.hidden)
+
+				if viewModel.isLoading {
+					LoadingView()
 				}
-				.scrollContentBackground(.hidden)
-				.listStyle(.plain)
+				else if viewModel.meals.isEmpty {
+					EmptyStateView()
+				}
+				else {
+					List(viewModel.meals) { meal in
+						NavigationLink(destination: MealDetailView(mealId: meal.idMeal,
+																   mealName: meal.strMeal)) {
+							MealListCell(meal: meal)
+						}
+																   .listRowBackground(Color.clear)
+																   .listRowSeparator(.hidden)
+					}
+					.scrollContentBackground(.hidden)
+					.listStyle(.plain)
+				}
 			}
 			.navigationTitle("🥘 Meals")
 		}
 		.task {
 			await viewModel.fetchAllMeals()
 		}
-		if viewModel.isLoading {
-			LoadingView()
-		}
+//		if viewModel.isLoading {
+//			LoadingView()
+//		}
+//		if viewModel.meals.isEmpty {
+//			EmptyStateView().ignoresSafeArea([.all])
+//		}
 	}
 }
 
