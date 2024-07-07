@@ -1,6 +1,6 @@
 ## Introduction
 
-This project is a native iOS app that allows users to browse recipes for Dessert category. The recipes are fetched from the following API - https://themealdb.com/api.php.
+This project is a native iOS app that allows users to browse recipes for Dessert category. There are no external dependencies. The recipes are fetched from the following API - https://themealdb.com/api.php.
 There are 2 endpoints this app utilizes:
 - https://themealdb.com/api/json/v1/1/filter.php?c=Dessert for fetching the list of meals in the Dessert category.
 - https://themealdb.com/api/json/v1/1/lookup.php?i=MEAL_ID for fetching the meal details by its ID.
@@ -48,12 +48,12 @@ A list of features implemented in the project.
 
 ## Usage and Testing
 
-Instructions on how to run the project.
+**Run the project.**
 
 1. Select the target device/simulator.
 2. Build and run the project by clicking on the "Run" button in Xcode or using the shortcut Cmd + R.
 
-Instructions on how to run the tests for the project.
+**Run tests**
 
 1. Open the Test Navigator in Xcode.
 2. Click the play button next to the test suite or use the shortcut Cmd + U.
@@ -76,8 +76,7 @@ A list of features I would add if I were to release this in production.
 #### List of meals (initial screen)
 | Launch screen | Meals List |
 |:--:|:--:|
-|<img src=https://github.com/bdsh-14/Recipes/assets/25411892/356c64a3-b955-4fdc-9c4f-c315455a671d width=250 />|<img src=https://github.com/bdsh-14/Recipes/assets/25411892/6571e8cd-dfa0-4156-8176-a34884c8cb73 width=250 />|
-
+|<img src=https://github.com/bdsh-14/Recipes/assets/25411892/fda7e8c1-f72f-4599-8dd7-2dc7af02e19a width=250 />|<img src=https://github.com/bdsh-14/Recipes/assets/25411892/268908f7-1a5c-4ab0-864f-027dd73b79d7 width=250 />|
 
 #### Details screen
 | Collapsed | Expanded |
