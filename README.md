@@ -7,9 +7,14 @@ There are 2 endpoints this app utilizes:
 
 ## Table of contents
 
-- [Requirements](#Requirements)
-- [Architecture](#Architecture)
-- [Features](#Features)
+- [Requirements](#requirements)
+- [Architecture](#architecture)
+- [Features](#features)
+- [Usage and Testing](#usage-and-testing)
+- [Experience](#experience)
+- [Future Improvements](#future-improvements)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
 
 ## Requirements
 
@@ -53,6 +58,10 @@ Instructions on how to run the tests for the project.
 1. Open the Test Navigator in Xcode.
 2. Click the play button next to the test suite or use the shortcut Cmd + U.
 
+## Experience
+
+I have extensive experience with UIKit and have used it in several projects. This project represents my first formal attempt at using SwiftUI. Through this project, I aimed to explore SwiftUI's features and capabilities, leveraging my existing knowledge of iOS development.
+
 ## Future Improvements
 
 A list of features I would add if I were to release this in production.
@@ -75,5 +84,9 @@ A list of features I would add if I were to release this in production.
 |:--:|:--:|
 |<img src=https://github.com/bdsh-14/Recipes/assets/25411892/53548110-f003-46a4-b328-17d9d3320b7f width=250 />|<img src=https://github.com/bdsh-14/Recipes/assets/25411892/65ee218a-9ed6-42a4-a4e5-a6af9cad93a7 width=250 />|
 
+## Contact
 
+Provide your contact information or instructions on how to reach you for questions or feedback.
 
+- Email: bdsh.14@gmail.com
+- LinkedIn: [Bidisha Biswas](https://www.linkedin.com/in/yourprofile/](https://www.linkedin.com/in/biswasbidisha/))
