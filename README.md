@@ -88,4 +88,4 @@ A list of features I would add if I were to release this in production.
 Provide your contact information or instructions on how to reach you for questions or feedback.
 
 - Email: bdsh.14@gmail.com
-- LinkedIn: [Bidisha Biswas](https://www.linkedin.com/in/yourprofile/](https://www.linkedin.com/in/biswasbidisha/))
+- LinkedIn: [www.linkedin.com/in/biswasbidisha](https://www.linkedin.com/in/biswasbidisha)
