@@ -2,8 +2,7 @@ import Foundation
 
 @MainActor
 class MealsListViewModel: ObservableObject {
-	@Published var meals: [Meal] = []
-	@Published var isLoading: Bool = false
+	@Published var state: MealsListViewState = .loading
 
 	private var networkManager: NetworkManagerInterface
 
@@ -12,14 +11,13 @@ class MealsListViewModel: ObservableObject {
 	}
 
 	func fetchAllMeals() async {
-		isLoading = true
+		state = .loading
 		do {
 			let meals = try await networkManager.fetchAllMeals()
-			self.meals = meals.sorted(by: { $0.strMeal < $1.strMeal })
+			state = meals.isEmpty ? .empty : .loaded(meals.sorted(by: { $0.strMeal < $1.strMeal }))
 		}
 		catch {
-			print(error)
+			state = .error(error.localizedDescription)
 		}
-		isLoading = false
 	}
 }

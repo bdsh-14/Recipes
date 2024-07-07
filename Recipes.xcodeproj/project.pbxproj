@@ -19,6 +19,8 @@
 		270CF4C52C376E2A00EE3A57 /* MealsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */; };
 		270CF4C92C37702900EE3A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */; };
 		270CF4CB2C3778E000EE3A57 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */; };
+		2721B74E2C3A3FAB00636B3E /* MealsListLoadedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721B74D2C3A3FAB00636B3E /* MealsListLoadedView.swift */; };
+		2721B7502C3A45CF00636B3E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2721B74F2C3A45CF00636B3E /* ErrorView.swift */; };
 		2726EBFF2C39F6F1009A7ADA /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726EBFE2C39F6F1009A7ADA /* MockURLProtocol.swift */; };
 		2726EC012C39F70D009A7ADA /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726EC002C39F70D009A7ADA /* NetworkManagerTests.swift */; };
 		273414962C386F120034619D /* IngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273414952C386F120034619D /* IngredientsCell.swift */; };
@@ -59,6 +61,8 @@
 		270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListViewModel.swift; sourceTree = "<group>"; };
 		270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		2721B74D2C3A3FAB00636B3E /* MealsListLoadedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsListLoadedView.swift; sourceTree = "<group>"; };
+		2721B74F2C3A45CF00636B3E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		2726EBFE2C39F6F1009A7ADA /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		2726EC002C39F70D009A7ADA /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		273414952C386F120034619D /* IngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCell.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				273414D12C38F2520034619D /* ExpandableRowStyle.swift */,
 				270CF4CE2C377E4F00EE3A57 /* Cells */,
 				27452EDC2C3A31F2003D7AB1 /* EmptyStateView.swift */,
+				2721B74F2C3A45CF00636B3E /* ErrorView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			children = (
 				270CF4C42C376E2A00EE3A57 /* MealsListViewModel.swift */,
 				270CF48F2C372FF900EE3A57 /* MealsListView.swift */,
+				2721B74D2C3A3FAB00636B3E /* MealsListLoadedView.swift */,
 			);
 			path = MealsList;
 			sourceTree = "<group>";
@@ -318,12 +324,14 @@
 			files = (
 				273414D22C38F2520034619D /* ExpandableRowStyle.swift in Sources */,
 				270CF4BD2C37323B00EE3A57 /* MealDetails.swift in Sources */,
+				2721B7502C3A45CF00636B3E /* ErrorView.swift in Sources */,
 				270CF4C52C376E2A00EE3A57 /* MealsListViewModel.swift in Sources */,
 				270CF4BB2C37321100EE3A57 /* Meal.swift in Sources */,
 				270CF4CB2C3778E000EE3A57 /* RemoteImage.swift in Sources */,
 				27452EDD2C3A31F2003D7AB1 /* EmptyStateView.swift in Sources */,
 				270CF4B82C3731C200EE3A57 /* NetworkManager.swift in Sources */,
 				270CF4902C372FF900EE3A57 /* MealsListView.swift in Sources */,
+				2721B74E2C3A3FAB00636B3E /* MealsListLoadedView.swift in Sources */,
 				273414D02C38C33F0034619D /* MealImageView.swift in Sources */,
 				27C769572C3781220086BA6D /* MealDetailView.swift in Sources */,
 				273414962C386F120034619D /* IngredientsCell.swift in Sources */,

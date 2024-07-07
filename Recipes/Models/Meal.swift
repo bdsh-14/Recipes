@@ -1,6 +1,6 @@
 import Foundation
 
-struct Meal: Decodable, Identifiable {
+struct Meal: Decodable, Identifiable, Equatable {
 	let strMeal: String
 	let strMealThumb: String
 	let idMeal: String

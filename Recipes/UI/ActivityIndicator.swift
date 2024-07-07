@@ -14,8 +14,7 @@ struct ActivityIndicator: UIViewRepresentable {
 struct LoadingView: View {
 	var body: some View {
 		ZStack {
-			Color(.secondarySystemBackground)
-				.ignoresSafeArea(.all)
+			Color.brown.opacity(0.4).ignoresSafeArea()
 			ActivityIndicator()
 		}
 	}

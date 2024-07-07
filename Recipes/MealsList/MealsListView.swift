@@ -8,23 +8,15 @@ struct MealsListView: View {
 			ZStack {
 				Color.brown.opacity(0.4).ignoresSafeArea()
 
-				if viewModel.isLoading {
+				switch viewModel.state {
+				case .loading:
 					LoadingView()
-				}
-				else if viewModel.meals.isEmpty {
+				case .empty:
 					EmptyStateView()
-				}
-				else {
-					List(viewModel.meals) { meal in
-						NavigationLink(destination: MealDetailView(mealId: meal.idMeal,
-																   mealName: meal.strMeal)) {
-							MealListCell(meal: meal)
-						}
-																   .listRowBackground(Color.clear)
-																   .listRowSeparator(.hidden)
-					}
-					.scrollContentBackground(.hidden)
-					.listStyle(.plain)
+				case .loaded(let meals):
+					MealsListLoadedView(meals: meals)
+				case .error(let message):
+					ErrorView(message: message)
 				}
 			}
 			.navigationTitle("🥘 Meals")
@@ -32,15 +24,16 @@ struct MealsListView: View {
 		.task {
 			await viewModel.fetchAllMeals()
 		}
-//		if viewModel.isLoading {
-//			LoadingView()
-//		}
-//		if viewModel.meals.isEmpty {
-//			EmptyStateView().ignoresSafeArea([.all])
-//		}
 	}
 }
 
+enum MealsListViewState: Equatable {
+	case loading
+	case empty
+	case loaded([Meal])
+	case error(String)
+}
+
 #Preview {
-    MealsListView()
+	MealsListView()
 }

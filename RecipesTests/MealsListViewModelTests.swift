@@ -18,8 +18,21 @@ final class MealsListViewModelTests: XCTestCase {
 	}
 
 	@MainActor
-	func test_fetchAllMeals_sorted_alphabetically() async {
+	func test_fetchAllMeals_loadingState() async {
 		// Given
+		mockNetworkManager.meals = []
+
+		// When
+		await mockViewModel.fetchAllMeals()
+
+		// Then
+		if case .loading = mockViewModel.state {
+			XCTFail("Expected state to be loading initially")
+		}
+	}
+
+	@MainActor
+	func test_fetchAllMeals_sorted_alphabetically() async {
 		let meal_1 = Meal(strMeal: "Ice cream sandwich",
 						  strMealThumb: "https://ice-cream-sandwich",
 						  idMeal: "123")
@@ -32,25 +45,47 @@ final class MealsListViewModelTests: XCTestCase {
 		await mockViewModel.fetchAllMeals()
 
 		// Then
-		XCTAssertEqual(mockViewModel.meals.count, 2)
-		XCTAssertEqual(mockViewModel.meals[0].strMeal, "Creme brulee")
-		XCTAssertEqual(mockViewModel.meals[0].strMealThumb, "https://creme-brulee")
-		XCTAssertEqual(mockViewModel.meals[0].idMeal, "456")
-		XCTAssertEqual(mockViewModel.meals[1].strMeal, "Ice cream sandwich")
-		XCTAssertEqual(mockViewModel.meals[1].strMealThumb, "https://ice-cream-sandwich")
-		XCTAssertEqual(mockViewModel.meals[1].idMeal, "123")
+		if case let .loaded(meals) = mockViewModel.state {
+			XCTAssertEqual(meals.count, 2)
+			XCTAssertEqual(meals[0].strMeal, "Creme brulee")
+			XCTAssertEqual(meals[0].strMealThumb, "https://creme-brulee")
+			XCTAssertEqual(meals[0].idMeal, "456")
+			XCTAssertEqual(meals[1].strMeal, "Ice cream sandwich")
+			XCTAssertEqual(meals[1].strMealThumb, "https://ice-cream-sandwich")
+			XCTAssertEqual(meals[1].idMeal, "123")
+		}
 	}
 
 	@MainActor
-	func testFetchMealDetailsFailure() async {
+	func test_fetchAllMeals_emptyState() async {
 		// Given
-		mockNetworkManager.shouldReturnError = true
+		mockNetworkManager.meals = []
+
 		// When
 		await mockViewModel.fetchAllMeals()
 
 		// Then
-		XCTAssertEqual(mockViewModel.meals.count, 0)
-		XCTAssertFalse(mockViewModel.isLoading)
+		if case .empty = mockViewModel.state {
+			// Success
+		} else {
+			XCTFail("Expected state to be empty")
+		}
+	}
+
+	@MainActor
+	func testFetchAllMealsFailure() async {
+		// Given
+		mockNetworkManager.shouldReturnError = true
+
+		// When
+		await mockViewModel.fetchAllMeals()
+
+		// Then
+		if case let .error(errorMessage) = mockViewModel.state {
+			XCTAssertNotNil(errorMessage)
+		} else {
+			XCTFail("Expected state to be error")
+		}
 	}
 }
 

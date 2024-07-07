@@ -1,40 +1,42 @@
 import SwiftUI
 
 struct MealDetailView: View {
-	@StateObject var viewModel = MealDetailViewModel()
+	@StateObject private var viewModel = MealDetailViewModel()
 	let mealId: String
 	let mealName: String
 	@State private var ingredientsExpanded = false
 	@State private var instructionsExpanded = false
 
 	var body: some View {
-		ZStack {
-			Color.brown.opacity(0.4).ignoresSafeArea()
-			VStack {
-				if let mealDetail = viewModel.mealDetail {
-					MealImageView(imageUrl: mealDetail.strMealThumb)
-						.padding(.bottom)
-					List {
-						DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
-							IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
+		NavigationStack {
+			ZStack {
+				Color.brown.opacity(0.4).ignoresSafeArea()
+				VStack {
+					if let mealDetail = viewModel.mealDetail {
+						MealImageView(imageUrl: mealDetail.strMealThumb)
+							.padding(.bottom)
+						List {
+							DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
+								IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
+							}
+							.modifier(ExpandableRowStyle())
+							DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
+								InstructionsCell(instructions: mealDetail.strInstructions)
+							}
+							.modifier(ExpandableRowStyle())
 						}
-						.modifier(ExpandableRowStyle())
-						DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
-							InstructionsCell(instructions: mealDetail.strInstructions)
-						}
-						.modifier(ExpandableRowStyle())
+						.listStyle(.plain)
 					}
-					.listStyle(.plain)
+				}
+				.padding()
+				.navigationTitle(mealName)
+				.task {
+					await viewModel.fetchMealDetails(for: mealId)
+				}
+				if viewModel.isLoading {
+					LoadingView().ignoresSafeArea([.all])
 				}
 			}
-			.navigationBarTitle(mealName)
-			.padding()
-			.task {
-				await viewModel.fetchMealDetails(for: mealId)
-			}
-		}
-		if viewModel.isLoading {
-			LoadingView()
 		}
 	}
 }
