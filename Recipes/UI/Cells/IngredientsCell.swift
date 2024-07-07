@@ -9,13 +9,6 @@ struct IngredientsCell: View {
 				HStack {
 					Text(item.ingredient)
 						.font(.body)
-						.foregroundStyle(
-							.linearGradient(
-								colors: [.brown, .black],
-								startPoint: .top,
-								endPoint: .bottom
-							)
-						)
 					Spacer()
 					Text(item.measurement)
 						.font(.body)

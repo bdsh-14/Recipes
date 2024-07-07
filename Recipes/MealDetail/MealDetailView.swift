@@ -8,31 +8,30 @@ struct MealDetailView: View {
 	@State private var instructionsExpanded = false
 
 	var body: some View {
-		VStack {
-			if let mealDetail = viewModel.mealDetail {
-				MealImageView(imageUrl: mealDetail.strMealThumb)
-					.padding(.bottom)
-				List {
-					DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
-						IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
-					}
-					.modifier(ExpandableRowStyle())
-					DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
-						InstructionsCell(instructions: mealDetail.strInstructions)
-					}
-					.modifier(ExpandableRowStyle())
-				}
-				.scrollContentBackground(.hidden)
-				.listStyle(.plain)
-			}
-		}
-		.navigationBarTitle(mealName)
-		.padding()
-		.background {
+		ZStack {
 			Color.brown.opacity(0.4).ignoresSafeArea()
-		}
-		.task {
-			await viewModel.fetchMealDetails(for: mealId)
+			VStack {
+				if let mealDetail = viewModel.mealDetail {
+					MealImageView(imageUrl: mealDetail.strMealThumb)
+						.padding(.bottom)
+					List {
+						DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
+							IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
+						}
+						.modifier(ExpandableRowStyle())
+						DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
+							InstructionsCell(instructions: mealDetail.strInstructions)
+						}
+						.modifier(ExpandableRowStyle())
+					}
+					.listStyle(.plain)
+				}
+			}
+			.navigationBarTitle(mealName)
+			.padding()
+			.task {
+				await viewModel.fetchMealDetails(for: mealId)
+			}
 		}
 		if viewModel.isLoading {
 			LoadingView()

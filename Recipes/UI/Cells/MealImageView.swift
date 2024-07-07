@@ -6,7 +6,7 @@ struct MealImageView: View {
     var body: some View {
 		MealRemoteImage(urlString: imageUrl)
 			.aspectRatio(contentMode: .fill)
-			.frame(maxWidth: .infinity, minHeight: 100, maxHeight: 200)
+			.frame(maxWidth: .infinity, minHeight: 80, maxHeight: 150)
 			.cornerRadius(8)
 			.shadow(radius: 8)
     }

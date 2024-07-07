@@ -3,18 +3,20 @@ import SwiftUI
 struct MealListCell: View {
 	let meal: Meal
 
-    var body: some View {
-		ZStack {
-			VStack {
-				MealImageView(imageUrl: meal.strMealThumb)
+	var body: some View {
+		VStack {
+			MealImageView(imageUrl: meal.strMealThumb)
+				.padding(.bottom)
 
-				Text("\(meal.strMeal)")
-					.foregroundStyle(.secondary)
-					.fontWeight(.bold)
-			}
-			.padding([.bottom])
+			Text("\(meal.strMeal)")
+				.font(.title2)
+				.foregroundStyle(.secondary)
+				.fontWeight(.bold)
 		}
-    }
+		.padding([.bottom])
+		.border(Color.brown)
+		.clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+	}
 }
 
 #Preview {

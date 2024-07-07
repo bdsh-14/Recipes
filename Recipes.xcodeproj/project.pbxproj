@@ -169,8 +169,8 @@
 			children = (
 				270CF4C82C37702900EE3A57 /* ActivityIndicator.swift */,
 				270CF4CA2C3778E000EE3A57 /* RemoteImage.swift */,
-				270CF4CE2C377E4F00EE3A57 /* Cells */,
 				273414D12C38F2520034619D /* ExpandableRowStyle.swift */,
+				270CF4CE2C377E4F00EE3A57 /* Cells */,
 			);
 			path = UI;
 			sourceTree = "<group>";

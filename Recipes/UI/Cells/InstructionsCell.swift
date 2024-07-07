@@ -7,7 +7,7 @@ struct InstructionsCell: View {
 		Text(instructions)
 			.font(.body)
 			.fontWeight(.regular)
-			.foregroundStyle(Color.black).opacity(0.8)
+		//	.foregroundStyle(Color.black).opacity(0.8)
     }
 }
 
