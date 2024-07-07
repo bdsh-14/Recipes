@@ -4,8 +4,8 @@ struct MealDetailView: View {
 	@StateObject private var viewModel = MealDetailViewModel()
 	let mealId: String
 	let mealName: String
-	@State private var ingredientsExpanded = false
-	@State private var instructionsExpanded = false
+	@State private var isExpandedIngredients = false
+	@State private var isExpandedInstructions = false
 
 	var body: some View {
 		NavigationStack {
@@ -16,11 +16,11 @@ struct MealDetailView: View {
 						MealImageView(imageUrl: mealDetail.strMealThumb)
 							.padding(.bottom)
 						List {
-							DisclosureGroup("Ingredients", isExpanded: $ingredientsExpanded) {
+							DisclosureGroup("Ingredients", isExpanded: $isExpandedIngredients) {
 								IngredientsCell(ingredientsMeasurements: mealDetail.ingredientMeasurements)
 							}
 							.modifier(ExpandableRowStyle())
-							DisclosureGroup("Instructions", isExpanded: $instructionsExpanded) {
+							DisclosureGroup("Instructions", isExpanded: $isExpandedInstructions) {
 								InstructionsCell(instructions: mealDetail.strInstructions)
 							}
 							.modifier(ExpandableRowStyle())

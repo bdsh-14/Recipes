@@ -9,9 +9,9 @@ struct MealListCell: View {
 				.padding(.bottom)
 
 			Text("\(meal.strMeal)")
-				.font(.title2)
-				.foregroundStyle(.secondary)
-				.fontWeight(.bold)
+				.font(.subheadline)
+				.foregroundStyle(.brown)
+				.fontWeight(.semibold)
 		}
 		.padding([.bottom])
 		.border(Color.brown)
