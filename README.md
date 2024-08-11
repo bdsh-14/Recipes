@@ -85,7 +85,5 @@ A list of features I would add if I were to release this in production.
 
 ## Contact
 
-Provide your contact information or instructions on how to reach you for questions or feedback.
-
 - Email: bdsh.14@gmail.com
 - LinkedIn: [www.linkedin.com/in/biswasbidisha](https://www.linkedin.com/in/biswasbidisha)
